@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "expo-repro",
+    "slug": "expo-repro",
+    "scheme": "expo-repro",
+    "version": "1.0.0",
+    "newArchEnabled": true,
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "assetBundlePatterns": [
+      "**/*",
+      "assets/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.justtesting.exporepro",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSFaceIDUsageDescription": "This app uses Face ID to protect your account when logging in"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.justtesting.exporepro"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "226357f3-2259-45e1-99c5-2c6eb6a3716b"
+      }
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F0EFFF",
+          "image": "./assets/icon.png",
+          "dark": {
+            "image": "./assets/icon.png",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 200
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to use Face ID."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera. We need this to scan QR codes and ID documents."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ],
+    ],
+    "owner": "expo-repro-justtestinging"
+  }
+}

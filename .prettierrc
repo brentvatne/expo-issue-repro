@@ -1,0 +1,25 @@
+{
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports"
+  ],
+  "importOrder": [
+    "^react(-native)?$",
+    "^expo(-[a-z]+)*(/[a-z]+)*?$",
+    "<THIRD_PARTY_MODULES>",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true,
+  "overrides": [
+    {
+      "files": "*.{yaml,yml}",
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}
