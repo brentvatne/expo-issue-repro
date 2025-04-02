@@ -8,14 +8,6 @@ const config = getSentryExpoConfig(__dirname);
 
 config.resolver.resolveRequest = (context, moduleName, platform) => {
   try {
-    // NOTE: This is to polyfill the crypto module on dynamic solana extension for react-native-quick-crypto
-    if (moduleName === 'crypto') {
-      return context.resolveRequest(
-        context,
-        'react-native-quick-crypto',
-        platform,
-      );
-    }
     return context.resolveRequest(context, moduleName, platform);
   } catch (error) {
     if (moduleName.endsWith('.js')) {
